@@ -2936,6 +2936,8 @@ dependencies = [
  "frame-system",
  "pallet-aura",
  "pallet-balances",
+ "pallet-contracts",
+ "pallet-contracts-primitives",
  "pallet-grandpa",
  "pallet-randomness-collective-flip",
  "pallet-sudo",
@@ -3136,6 +3138,36 @@ dependencies = [
  "frame-system",
  "parity-scale-codec",
  "serde",
+ "sp-runtime",
+ "sp-std",
+]
+
+[[package]]
+name = "pallet-contracts"
+version = "2.0.0-rc3"
+source = "git+https://github.com/paritytech/substrate.git?rev=19b4b70e7c7cf966cb5f5669a5e153485943095a#19b4b70e7c7cf966cb5f5669a5e153485943095a"
+dependencies = [
+ "frame-support",
+ "frame-system",
+ "pallet-contracts-primitives",
+ "parity-scale-codec",
+ "parity-wasm",
+ "pwasm-utils",
+ "serde",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+ "sp-sandbox",
+ "sp-std",
+ "wasmi-validation",
+]
+
+[[package]]
+name = "pallet-contracts-primitives"
+version = "2.0.0-rc3"
+source = "git+https://github.com/paritytech/substrate.git?rev=19b4b70e7c7cf966cb5f5669a5e153485943095a#19b4b70e7c7cf966cb5f5669a5e153485943095a"
+dependencies = [
+ "parity-scale-codec",
  "sp-runtime",
  "sp-std",
 ]
@@ -3762,6 +3794,17 @@ name = "protobuf"
 version = "2.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3e2ccb6b8f7e175f2d2401e7a5988b0630000164d221262c4fe50ae729513202"
+
+[[package]]
+name = "pwasm-utils"
+version = "0.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4f7a12f176deee919f4ba55326ee17491c8b707d0987aed822682c821b660192"
+dependencies = [
+ "byteorder",
+ "log",
+ "parity-wasm",
+]
 
 [[package]]
 name = "quick-error"
@@ -5724,6 +5767,19 @@ dependencies = [
  "proc-macro2",
  "quote 1.0.7",
  "syn 1.0.33",
+]
+
+[[package]]
+name = "sp-sandbox"
+version = "0.8.0-rc3"
+source = "git+https://github.com/paritytech/substrate.git?rev=19b4b70e7c7cf966cb5f5669a5e153485943095a#19b4b70e7c7cf966cb5f5669a5e153485943095a"
+dependencies = [
+ "parity-scale-codec",
+ "sp-core",
+ "sp-io",
+ "sp-std",
+ "sp-wasm-interface",
+ "wasmi",
 ]
 
 [[package]]
